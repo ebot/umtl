@@ -1,0 +1,92 @@
+!!!
+%html{ :xmlns => 'http://www.w3.org/1999/xhtml' }
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8' }
+    %title
+      UM Township Library
+    %link{ :href => 'stylesheets/grid.css', :type => 'text/css', :rel => 'stylesheet', :media => 'screen' }
+    %link{ :href => 'stylesheets/application.css', :type => 'text/css', :rel => 'stylesheet', :media => 'screen' }
+  %body
+    #page
+      #header.row
+        .column.grid_2
+          %p
+            %a{ :href => 'http://www.umtownship.org/' }
+              %img{ :src => 'images/um_logo.gif', :width => '70', :height => '68', :alt => 'Um Logo', :border => '0' }
+        .row
+          .column.grid_8
+            %h1
+              Upper Merion Township Library
+          .column.grid_2
+            %table#hours{ :border => '0', :cellspacing => '0', :cellpadding => '0' }
+              %tr
+                %th{ :colspan => '2' }
+                  Library Hours
+              %tr
+                %td
+                  Mon.-Thurs&nbsp;&nbsp;
+                %td
+                  9AM to 9PM
+              %tr
+                %td
+                  Friday
+                %td
+                  9 AM to 5 PM
+              %tr
+                %td
+                  Saturday
+                %td
+                  10 AM to 5 PM
+              %tr
+                %th{ :colspan => '2' }
+                  Weekends in Jul and Aug
+              %tr
+                %td
+                  Saturday
+                %td
+                  10AM to 2PM
+              %tr
+                %td
+                  Sunday
+                %td
+                  1 PM to 4:30 PM
+      #navigation.row
+        %a{ :href => 'index.html' }
+          .column.grid_2 Home
+        %a{ :href => 'http://spica.mclinc.org/polaris/default.aspx?ctx=15.1033.0.0.2l' }
+          .column.grid_2 Card Catalog
+        %a{ :href => 'http://www.umtownship.org/library/about_main.html' }
+          .column.grid_2 About Us
+        %a{ :href => 'http://www.umtownship.org/library/res_main.html' }
+          .column.grid_2 Resources
+        %a{ :href => 'http://www.umtownship.org/library/serv_main.html' }
+          .column.grid_2 Services
+        %a{ :href => 'http://www.umtownship.org/library/youth_main.html' }
+          .column.grid_1 Kids!
+      #social_media.row
+        .column.grid_6
+          %form{ :name => 'ccoptin', :action => 'http://visitor.constantcontact.com/d.jsp', :target => '_blank', :method => 'post', :style => 'margin-bottom:3;' }
+            %label{ :for => 'ea' }
+              Sign up for our newsletter:
+            %input#ea{ :type => 'text', :name => 'ea', :value => '' }
+            %input#go{ :type => 'submit', :name => 'go', :value => 'go' }
+        .column.grid_6
+          %table{ :border => '0', :cellspacing => '0', :cellpadding => '0' }
+            %tr
+              %td
+                %img{ :src => 'images/facebook-icon.gif', :height => '23px', :width => '23px', :border => '0' }
+                &nbsp;&nbsp;
+              %td
+                %a{ :href => 'http://www.facebook.com/?ref=home#/pages/King-of-Prussia-PA/Upper-Merion-Township-Library/69347104972?ref=mf' }
+                  Friend us on Facebook
+      #content.row
+        = yield
+      #footer.row
+        .column.grid_12
+          Upper Merion Township Library Director - Karl Helicher
+        .column.grid_12
+          175 West Valley Forge Road King of Prussia, PA. 19406
+        .column.grid_12
+          Adult Department Phone: 610-265-4805
+        .column.grid_12
+          Children's Department Phone: 610-265-4806
