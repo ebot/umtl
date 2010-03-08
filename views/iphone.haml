@@ -1,0 +1,58 @@
+!!!
+%html{ :xmlns => 'http://www.w3.org/1999/xhtml' }
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8' }
+    %title
+      UM Township Library
+    %link{ :href => 'stylesheets/iphone.css', :type => 'text/css', :rel => 'stylesheet', :media => 'screen' }
+  %body
+    #header
+      %img{ :src => 'images/um_logo.gif', :width => '70', :height => '68', :alt => 'Um Logo', :border => '0' }
+      %h1 Upper Merion Township Library
+      .clear
+    #catalog_search.section
+      %form{ :name => 'book_search', :action => 'search', :method => 'get' }
+        %label{ :for => 'search' } Find a book:
+        %input#search{ :type => 'text', :name => 'search', :value => '', :size => '15' }
+        %input#go{ :type => 'submit', :name => 'go', :value => 'go' }
+    #hours.section
+      %table#hours{ :border => '0', :cellspacing => '0', :cellpadding => '0' }
+        %tr
+          %th{ :colspan => '2' }
+            Library Hours
+        %tr
+          %td
+            Mon - Thur&nbsp;&nbsp;
+          %td
+            9AM to 9PM
+        %tr
+          %td
+            Friday
+          %td
+            9 AM to 5 PM
+        %tr
+          %td
+            Saturday
+          %td
+            10 AM to 5 PM
+        %tr
+          %th{ :colspan => '2' }
+            Weekends in Jul and Aug
+        %tr
+          %td
+            Saturday
+          %td
+            10AM to 2PM
+        %tr
+          %td
+            Sunday
+          %td
+            1 PM to 4:30 PM
+    #phone_numbers.section
+      %table{ :border => '0', :cellspacing => '0', :cellpadding => '0' }
+        %tr
+          %td Adult Department:&nbsp;&nbsp;
+          %td 610-265-4805
+        %tr
+          %td Children's Department:&nbsp;&nbsp;
+          %td 610-265-4806
