@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 require 'sinatra'
-require 'open-uri'
-require 'Nokogiri'
 
 # index
 get '/' do
@@ -14,7 +12,6 @@ get '/search' do
   redirect 'http://spica.mclinc.org/polaris/search/searchresults.aspx' <<
            '?ctx=15.1033.0.0.2&term=' <<
            search
-  haml :search
 end
 
 # SASS stylesheets
