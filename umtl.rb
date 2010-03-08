@@ -11,9 +11,9 @@ end
 # search
 get '/search' do
   search = params['search'].gsub(' ', '%20')
-  @doc = Nokogiri::HTML( open( 'http://spica.mclinc.org/polaris/search/searchresults.aspx' <<
-                               '?ctx=15.1033.0.0.2&ctrlSearchBars:searchbarKeyword:textboxTerm=' <<
-                               search ) )
+  redirect 'http://spica.mclinc.org/polaris/search/searchresults.aspx' <<
+           '?ctx=15.1033.0.0.2&term=' <<
+           search
   haml :search
 end
 
