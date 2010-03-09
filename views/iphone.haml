@@ -12,6 +12,12 @@
       .clear
     #catalog_search.section
       %form{ :name => 'book_search', :action => 'http://spica.mclinc.org/polaris/search/searchresults.aspx?ctx=15.1033.0.0.2', :method => 'get' }
+        %input{ :type => "hidden", :value => "Keyword", :name => "type" }
+        %input{ :type => "hidden", :value => "KW", :name => "by" }
+        %input{ :type => "hidden", :value => "MP", :name => "sort" }
+        %input{ :type => "hidden", :value => "TOM%3d*", :name => "limit" }
+        %input{ :type => "hidden", :value => "", :name => "query" }
+        %input{ :type => "hidden", :value => "0", :name => "page" }
         %label{ :for => 'search' } Find a book:
         %input#search{ :type => 'text', :name => 'term', :id => 'term', :value => '', :size => '15' }
         %input#go{ :type => 'submit', :name => 'go', :value => 'go' }
