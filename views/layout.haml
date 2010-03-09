@@ -65,15 +65,15 @@
           .column.grid_1 Kids!
       #social_media.row
         .column.grid_4
-          %form{ :name => 'book_search', :action => 'search', :method => 'get' }
+          %form{ :name => 'book_search', :action => 'http://spica.mclinc.org/polaris/search/searchresults.aspx?ctx=15.1033.0.0.2', :method => 'get' }
             %label{ :for => 'search' } Find a book:
-            %input#search{ :type => 'text', :name => 'search', :value => '', :size => '15' }
+            %input#search{ :type => 'text', :name => 'term', :id => 'term', :value => '', :size => '12' }
             %input#go{ :type => 'submit', :name => 'go', :value => 'go' }
         .column.grid_4
           %form{ :name => 'ccoptin', :action => 'http://visitor.constantcontact.com/d.jsp', :target => '_blank', :method => 'post', :style => 'margin-bottom:3;' }
             %label{ :for => 'ea' }
               Get our newsletter:
-            %input#ea{ :type => 'text', :name => 'ea', :value => '', :size => '15' }
+            %input#ea{ :type => 'text', :name => 'ea', :value => '', :size => '12' }
             %input#go{ :type => 'submit', :name => 'go', :value => 'go' }
         .column.grid_4
           %table{ :border => '0', :cellspacing => '0', :cellpadding => '0' }

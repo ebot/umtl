@@ -11,9 +11,9 @@
       %h1 Upper Merion Township Library
       .clear
     #catalog_search.section
-      %form{ :name => 'book_search', :action => 'search', :method => 'get' }
+      %form{ :name => 'book_search', :action => 'http://spica.mclinc.org/polaris/search/searchresults.aspx?ctx=15.1033.0.0.2', :method => 'get' }
         %label{ :for => 'search' } Find a book:
-        %input#search{ :type => 'text', :name => 'search', :value => '', :size => '15' }
+        %input#search{ :type => 'text', :name => 'term', :id => 'term', :value => '', :size => '15' }
         %input#go{ :type => 'submit', :name => 'go', :value => 'go' }
     #hours.section
       %table#hours{ :border => '0', :cellspacing => '0', :cellpadding => '0' }
